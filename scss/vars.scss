@@ -2,6 +2,10 @@ $w: #fff;
 $b: #000;
 
 $bg-main: #0e131b;
+$btn-cl: #6dd5ed;
+$btn-bx-sh: #88e8ff;
+$btn-gr-start: #0691b4;
+$btn-gr-end: #36d5fa;
 
 // Full height
 %fh{  
@@ -47,5 +51,15 @@ $bg-main: #0e131b;
   }
   @if $right != ""{
     right: #{$right}#{$unit};
+  }
+}
+
+// Mixin for height-width
+@mixin hw($h:"", $w:"", $unit: "px") {  
+  @if $h != ""{
+    height: #{$h}#{$unit};
+  }
+  @if $w != ""{
+    width: #{$w}#{$unit};
   }
 }

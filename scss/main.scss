@@ -1,40 +1,101 @@
-body {  
-  // font-family: 'Courier New', Courier, monospace;
-  // font-family: $nr;  
+html, body, .content{
+  @extend %fhw;
+}
+
+*:focus{
+  outline: none;
+  border: none;
+  box-shadow: none;  
+}
+
+button{
+  font-family: $lg;
+  font-size: 20px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.btn-pr{
+  color: $w;
+  border: none;  
+  box-shadow: 0 0 8px 0 rgba($btn-bx-sh, .7);
+  background-image: linear-gradient(86deg, $btn-gr-start, $btn-gr-end);
+}
+
+.btn-pr-outline{
+  color: $btn-cl;
+  background: none;
+  border: 2px solid $btn-cl;
+  &:hover{
+    background: rgba($btn-cl, .8);
+    color: $w;
+  }
+}
+
+body {
   background: $bg-main;
   color: $w;
   .header{
   	@extend %j-s-b;
   	@extend %fw;
-  	// @include pa(0, 0);
+  	@include pa(0, 0);
+    z-index: 1;
   	padding: 35px 70px;
+    nav {
+      position: relative;
+      left: 2vw;
+      a {
+        color: $w;
+        font-size: 20px;
+        font-family: $lg;
+        text-decoration: none;
+        margin: 0 32px;
+        transition: all .2s;        
+        &:hover{
+          color: rgba($w, .8);
+        }
+      }
+    }
+    button{
+      @include hw(50, 130);
+      &:nth-of-type(1){
+        margin-right: 20px;
+      }
+    }
   }
   .content{
-  	// padding: 35px 70px;  	
+    section{
+      @extend %fhw;
+      // border: 2px solid red;
+      &#section0{
+        @extend %j-c;
+        background: url(../img/bg-main.svg) no-repeat center;
+        .inner{
+          width: 50vw;          
+          .title{
+            font-family: $nl;
+            font-size: 55px;
+            font-weight: 300;
+            margin-bottom: 50px;
+          }
+          .sub-title{
+            font-family: $ml;
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 60px;            
+          }
+          button{
+            @include hw(55, 250);
+            font-family: $msb;
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
   }
   .footer{
   	@extend %j-s-b;
-  	// @extend %j-c;
   	@extend %fw;
   }
 }
- //  h1{
- //  	font-family: $nl;  
- //  	font-weight: bold;
- //    // color: $pr;
- //  }
- //  h2{
- //  	font-family: $nr;    	
- //  }
- //  h3{
- //  	font-family: $ml;
- //  }
- //  h4{
- //  	font-family: $msb;
- //  }
-	// p{
- //  	font-family: $lg;
-	// 	font-weight: bold;
-	//   font-size: 2vw;
-	//   // color: $sc;
-	// }
