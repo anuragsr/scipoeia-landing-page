@@ -1,0 +1,40 @@
+body {  
+  // font-family: 'Courier New', Courier, monospace;
+  // font-family: $nr;  
+  background: $bg-main;
+  color: $w;
+  .header{
+  	@extend %j-s-b;
+  	@extend %fw;
+  	// @include pa(0, 0);
+  	padding: 35px 70px;
+  }
+  .content{
+  	// padding: 35px 70px;  	
+  }
+  .footer{
+  	@extend %j-s-b;
+  	// @extend %j-c;
+  	@extend %fw;
+  }
+}
+ //  h1{
+ //  	font-family: $nl;  
+ //  	font-weight: bold;
+ //    // color: $pr;
+ //  }
+ //  h2{
+ //  	font-family: $nr;    	
+ //  }
+ //  h3{
+ //  	font-family: $ml;
+ //  }
+ //  h4{
+ //  	font-family: $msb;
+ //  }
+	// p{
+ //  	font-family: $lg;
+	// 	font-weight: bold;
+	//   font-size: 2vw;
+	//   // color: $sc;
+	// }

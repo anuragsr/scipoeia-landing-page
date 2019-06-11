@@ -1,0 +1,29 @@
+$nr: 'nexa-r';
+@font-face {
+  font-family: $nr;
+  src: url(../fonts/nexa/Nexa-Regular.otf) format('opentype');
+}
+
+$nl: 'nexa-l';
+@font-face {
+  font-family: $nl;
+  src: url(../fonts/nexa/Nexa-Light.otf) format('opentype');
+}
+
+$lg: 'lucida-grande-r';
+@font-face {
+  font-family: $lg;
+  src: url(../fonts/lucida/LucidaGrande.ttf) format('truetype');
+}
+
+$ml: 'muli-l';
+@font-face {
+  font-family: $ml;
+  src: url(../fonts/muli/Muli-Light.ttf) format('truetype');
+}
+
+$msb: 'muli-sb';
+@font-face {
+  font-family: $msb;
+  src: url(../fonts/muli/Muli-SemiBold.ttf) format('truetype');
+}

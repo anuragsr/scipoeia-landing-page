@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "nexa-r";
+  src: url(../fonts/nexa/Nexa-Regular.otf) format("opentype");
+}
+@font-face {
+  font-family: "nexa-l";
+  src: url(../fonts/nexa/Nexa-Light.otf) format("opentype");
+}
+@font-face {
+  font-family: "lucida-grande-r";
+  src: url(../fonts/lucida/LucidaGrande.ttf) format("truetype");
+}
+@font-face {
+  font-family: "muli-l";
+  src: url(../fonts/muli/Muli-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "muli-sb";
+  src: url(../fonts/muli/Muli-SemiBold.ttf) format("truetype");
+}
+body .footer, body .header {
+  width: 100%;
+}
+
+body .footer, body .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body {
+  background: #0e131b;
+  color: #fff;
+}
+body .header {
+  padding: 35px 70px;
+}
+
+/*# sourceMappingURL=style.css.map */
