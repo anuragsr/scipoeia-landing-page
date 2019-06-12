@@ -13,67 +13,302 @@
       <img src="img/logo.svg" alt="logo" />
       <nav>
         <a href="javascript:void(0)">Home</a>
-        <a href="javascript:void(0)">Product</a>
-        <a href="javascript:void(0)">Team</a>
-        <a href="javascript:void(0)">Contact Us</a>
+        <a href="javascript:void(0)" ng-click="scrollTo('#section1')">Product</a>
+        <a href="javascript:void(0)" ng-click="scrollTo('#section2')">Team</a>
+        <a href="javascript:void(0)" ng-click="scrollTo('#section4')">Contact Us</a>
       </nav>
       <div class="end">
         <button class="btn-pr-outline">Sign Up</button>
         <button class="btn-pr-outline">Login</button>
       </div>
     </div>
-    <div class="content">      
-      <section id="section0">
-        <div class="inner text-center">          
-          <div class="title">Big title is just right here</div>
-          <div class="sub-title">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <section id="section0">
+      <div class="inner text-center">          
+        <div class="title">Big title is just right here</div>
+        <div class="sub-title">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+        <button class="btn-pr" data-toggle="modal" data-target="#sub-modal">SUBSCRIBE</button>
+      </div>
+    </section>
+    <section id="section1">
+      <div class="container">
+        <div class="text-center pr-title">Products</div>
+        <div class="row ctn-pr">
+          <div class="col-6">
+            <img src="img/explorer.svg" />
           </div>
-          <button class="btn-pr">SUBSCRIBE</button>
+          <div class="col-6">
+            <div class="pr-desc-title">EXPLORER</div>
+            <div class="pr-desc">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              </p>
+              <p class="mt-4">
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </p>
+            </div>
+          </div>
         </div>
-      </section>
-      <section id="section1">
-        <div class="container">
+        <div class="row ctn-pr">
+          <div class="col-6">
+            <div class="pr-desc-title">SUGGESTER</div>
+            <div class="pr-desc">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              </p>
+              <p class="mt-4">
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </p>
+            </div>
+          </div>
+          <div class="col-6 text-center">
+            <img src="img/suggester.svg" />
+          </div>
         </div>
-      </section>
-      <section id="section2">
-        <div class="container">
+        <div class="row ctn-pr">
+          <div class="col-6">
+            <!-- <img src="img/spider.svg" /> -->
+            <img src="img/spider.png" />
+          </div>
+          <div class="col-6">
+            <div class="pr-desc-title">SPIDER</div>
+            <div class="pr-desc">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              </p>
+              <p class="mt-4">
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </p>
+            </div>
+          </div>
         </div>
-      </section>
-      <section id="section3">
-        <div class="container">
+        <div class="row ctn-pr">
+          <div class="col-6">
+            <div class="pr-desc-title">TRACKER</div>
+            <div class="pr-desc">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              </p>
+              <p class="mt-4">
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </p>
+            </div>
+          </div>
+          <div class="col-6 text-center">
+            <img src="img/tracker.svg" />
+          </div>
         </div>
-      </section>
-      <section id="section4">
-        <div class="container">
+      </div>
+    </section>
+    <section id="section2">
+      <div class="container">
+        <div class="text-center pr-title">Team</div>
+        <div class="row ctn-team">
+          <div class="col-3 ctn-team-item">
+            <img src="img/profile-1.svg">
+            <div class="ctn-desc">                
+              <div class="title">First Last Name</div>
+              <div class="sub-title">Position</div>
+            </div>
+          </div>
+          <div class="col-3 ctn-team-item">
+            <img src="img/profile-2.svg">
+            <div class="ctn-desc">                
+              <div class="title">First Last Name</div>
+              <div class="sub-title">Position</div>
+            </div>
+          </div>
+          <div class="col-3 ctn-team-item">
+            <img src="img/profile-3.svg">
+            <div class="ctn-desc">                
+              <div class="title">First Last Name</div>
+              <div class="sub-title">Position</div>
+            </div>
+          </div>
+          <div class="col-3 ctn-team-item">
+            <img src="img/profile-4.svg">
+            <div class="ctn-desc">                
+              <div class="title">First Last Name</div>
+              <div class="sub-title">Position</div>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
+    <section id="section3">
+      <div class="container">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        </p>
+        <p>
+          Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+    </section>
+    <section id="section4">
+      <div class="container">
+        <div class="ctn-contact">
+          <div class="title">
+            Contact
+          </div>
+          <form name="contactForm" ng-submit="submitForm('contact')">
+            <div class="form-field">
+              <input ng-model="forms.contact.name" class="txt-inp" type="text" id="fname" placeholder=" "/>
+              <label class="plh" for="fname">NAME</label>
+            </div>
+            <div class="form-field">
+              <input ng-model="forms.contact.email" class="txt-inp" type="email" id="email" placeholder=" "/>
+              <label class="plh" for="email">EMAIL</label>
+            </div>
+            <div class="form-field">
+              <textarea ng-model="forms.contact.message" id="message" placeholder=" "></textarea>
+              <label class="plh" for="message">MESSAGE</label>
+            </div>
+            <div class="form-field text-right">
+              <button class="btn-pr" type="submit" ng-disabled="contactForm.$invalid">SEND</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <div class="title">
+              Product
+            </div>
+            <div class="links">
+              <a href="javascript:void(0)">Features</a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="title">
+              Company
+            </div>
+            <div class="links">
+              <a href="javascript:void(0)">Team</a><br/>
+              <a href="javascript:void(0)">Privacy Policy</a><br/>
+              <a href="javascript:void(0)">Unknown Policy</a><br/>
+              <a href="javascript:void(0)">Terms of Service</a>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="title">
+              Sources
+            </div>
+            <div class="links">
+              <a href="javascript:void(0)">Scopus</a><br/>
+              <a href="javascript:void(0)">Scimago</a><br/>
+              <a href="javascript:void(0)">Science Direct</a>
+            </div>
+          </div>
+          <div class="col-3">
+            <img src="img/logo.svg" />
+            <div class="res">Launching Your Research</div>
+            <div class="social">
+              <div>Find us on:</div>
+              <div class="icons">
+                <a href="javascript:void(0)"><img src="img/fb.svg"/></a>
+                <a href="javascript:void(0)"><img src="img/ig.svg"/></a>
+                <a href="javascript:void(0)"><img src="img/li.svg"/></a>
+                <a href="javascript:void(0)"><img src="img/tw.svg"/></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright text-center">
+      © 2018-2019 Scipoeia. All rights reserved
     </div>
 
-    <!-- <div class="content">
+    <div class="modal fade" id="sub-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="ctn-contact modal-content">
+          <div class="title">
+            Scipoeia
+          </div>
+          <div class="sub-title">
+            Sign Up and we will let you know<br/> what we're up to
+          </div>
+          <form name="subscribeForm" ng-submit="submitForm('subscribe')">
+            <div class="form-field">
+              <input ng-model="forms.subscribe.email" class="txt-inp" type="email" id="email" placeholder=" " required/>
+              <label class="plh" for="email">EMAIL</label>
+            </div>
+            <div class="form-field">
+              <input ng-model="forms.subscribe.fname" class="txt-inp" type="text" id="f-name" placeholder=" "/>
+              <label class="plh" for="f-name">FIRST NAME</label>
+            </div>
+            <div class="form-field">
+              <input ng-model="forms.subscribe.lname" class="txt-inp" type="text" id="l-name" placeholder=" "/>
+              <label class="plh" for="l-name">LAST NAME</label>
+            </div>
+            <div class="form-field mb-0">
+              <div class="custom-control custom-checkbox">
+                <input ng-model="forms.subscribe.agree" type="checkbox" class="custom-control-input" id="customCheck1" required>
+                <label class="custom-control-label" for="customCheck1">Agree to Privacy Policy</label>
+              </div>
+            </div>
+            <div class="form-field mb-0 text-center">
+              <button type="submit" class="btn-pr" ng-disabled="subscribeForm.$invalid">SUBSCRIBE</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
-    </div> -->
-    <!-- <div class="container">
-      <div class="footer">        
-        <div class="start">A</div>
-        <div class="middle">B</div>
-        <div class="end">C</div>
-        <div class="end">D</div>
-      </div>
-      <div class="copyright text-center">
-        © 2018-2019 Scipoeia. All rights reserved
-      </div>
-    </div> -->
-    <!-- <div class="container p-4">
-      <h2>This one from common.scss</h2>
-      <p>{{text}}</p>
-      <h3>{{text}}</h3>
-      <h4>{{text}}</h4>
-    </div> -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/angular.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/services.js"></script>
+    <script>
+      var l = console.log.bind(window.console)
+      , app = angular.module('app', [])
+
+      app.controller('Ctrl', function($scope){
+        var resetForms = function(){
+          $scope.forms = {
+            contact: {
+              name: "",
+              email: "",
+              message: "",
+            },
+            subscribe: {
+              email: "",
+              fname: "",
+              lname: "",
+              agree: false
+            },
+          }
+
+          $(".modal").modal('hide')
+        }
+
+        $scope.scrollTo = function(el){
+          $('html, body').animate({
+            scrollTop: $(el).offset().top
+            // scrollTop: $("#div1").offset().top
+          }, 500);
+        }
+
+        $scope.submitForm = function(type) {
+          alert('Submitted with values in console.log')
+          if(type === "contact"){
+            l("Contact details", $scope.forms.contact)
+          } else{
+            l("Subscribe details", $scope.forms.subscribe)
+          }
+
+          resetForms()
+        }
+
+        resetForms()
+      })
+    </script>
   </body>
 </html>

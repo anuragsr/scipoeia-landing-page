@@ -7,6 +7,17 @@ $btn-bx-sh: #88e8ff;
 $btn-gr-start: #0691b4;
 $btn-gr-end: #36d5fa;
 
+$team-bx-sh: #0691b4;
+$team-gr-start: #0e131b;
+$team-gr-end: #0b0f16;
+
+$cnt-gr-end:  #0b0e12;
+$bdr-inp: #455a64; 
+$inp-bx-sh: #1cacd0;
+
+$footer-bdr: #13a4c7;
+$copy-cl: #0c0f15;
+
 // Full height
 %fh{  
   height: 100%;
@@ -62,4 +73,14 @@ $btn-gr-end: #36d5fa;
   @if $w != ""{
     width: #{$w}#{$unit};
   }
+}
+
+// Prefix & Keyframes mixins
+@mixin prefixed($property, $value) {
+  -webkit-#{$property}: #{$value}; /* Safari */
+  -khtml-#{$property}: #{$value}; /* Konqueror HTML */  
+  -moz-#{$property}: #{$value}; /* Firefox */
+  -ms-#{$property}: #{$value}; /* Internet Explorer/Edge */
+  -o-#{$property}: #{$value}; /* Opera */
+  #{$property}: #{$value}; /* Non-prefixed version */
 }

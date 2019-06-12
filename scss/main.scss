@@ -1,4 +1,4 @@
-html, body, .content{
+html, body{
   @extend %fhw;
 }
 
@@ -14,6 +14,10 @@ button{
   border-radius: 2px;
   cursor: pointer;
   transition: all .2s;
+  &:disabled{
+    cursor: not-allowed;
+    opacity: .5;
+  }
 }
 
 .btn-pr{
@@ -64,38 +68,269 @@ body {
       }
     }
   }
-  .content{
-    section{
+  section{
+    padding-top: 50px; 
+    .pr-title{
+      font-family: $nl;
+      font-size: 36px;
+      font-weight: 300;
+      margin-bottom: 35px;
+    }
+    &#section0{
       @extend %fhw;
-      // border: 2px solid red;
-      &#section0{
-        @extend %j-c;
-        background: url(../img/bg-main.svg) no-repeat center;
-        .inner{
-          width: 50vw;          
-          .title{
-            font-family: $nl;
-            font-size: 55px;
-            font-weight: 300;
-            margin-bottom: 50px;
+      @extend %j-c;
+      background: url(../img/bg-main.svg) no-repeat center;
+      background-size: contain;
+      .inner{
+        width: 50vw;          
+        .title{
+          font-family: $nl;
+          font-size: 55px;
+          font-weight: 300;
+          margin-bottom: 50px;
+        }
+        .sub-title{
+          font-family: $ml;
+          font-size: 20px;
+          font-weight: 300;
+          margin-bottom: 60px;            
+        }
+        button{
+          @include hw(55, 250);
+          font-family: $msb;
+          letter-spacing: 2px;
+        }
+      }
+    }
+    &#section1{
+      .ctn-pr{
+        margin-bottom: 150px;
+        align-items: center;
+        .pr-desc-title{
+          font-family: $msb;
+          font-size: 24px;
+          font-weight: 600;
+          margin-bottom: 24px;
+          letter-spacing: 2px;
+        }
+        .pr-desc{
+          font-family: $ml;
+          font-size: 20px;
+          font-weight: 300;
+        }
+      }
+    }
+    &#section2{
+      .pr-title{
+        margin-bottom: 80px;
+      }
+      .ctn-team{
+        margin-bottom: 80px;
+        .ctn-team-item{
+          cursor: pointer;
+          &:hover .ctn-desc{
+            box-shadow: 0 11px 12px 0 rgba($team-bx-sh, .4);
           }
-          .sub-title{
-            font-family: $ml;
-            font-size: 20px;
-            font-weight: 300;
-            margin-bottom: 60px;            
+          img{
+            height: 140px;
+            display: block;
+            margin: 0 auto;
           }
-          button{
-            @include hw(55, 250);
-            font-family: $msb;
-            letter-spacing: 2px;
+          .ctn-desc{
+            position: relative;
+            top: -50px;
+            z-index: -1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            font-family: $lg;
+            padding: 20px;         
+            height: 180px;
+            border-radius: 10px;
+            background-image: linear-gradient(to bottom, $team-gr-start, $team-gr-end);
+            transition: box-shadow .2s;
+            box-shadow: 0 11px 12px 0 rgba($team-bx-sh, 0);
+            .title{
+              font-size: 20px;
+              margin-bottom: 12px;
+            }
+            .sub-title{
+              font-size: 16px;
+              opacity: .4;
+            }
           }
+        }
+      } 
+    }
+    &#section3{
+      @extend %fhw;
+      height: 120%;
+      padding: 22px;
+      font-family: $ml;
+      font-size: 24px;
+      font-weight: 300;
+      background: url(../img/bg-bottom.png) no-repeat center;
+      background-size: cover;
+      background-position: 0% 100%;
+      p{
+        margin-bottom: 35px;
+      }
+    }
+    &#section4{
+      margin-top: -250px;
+      padding-bottom: 150px;      
+    }
+  }
+
+  .ctn-contact{
+    width: 660px;
+    height: 650px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 2px;
+    background: rgba($team-gr-start, .8);
+    .title{
+      text-align: center;
+      font-family: $nl;
+      font-size: 36px;
+      font-weight: 300;
+      margin-bottom: 35px;
+    }
+    .form-field{
+      position: relative;
+      padding: 15px;
+      margin: 0 auto;
+      width: 450px;
+      margin-bottom: 15px;          
+      label.plh{
+        cursor: text;
+        font-size: 14px;
+        position: absolute;
+        padding-left: 20px;
+        top: 32px;
+      }
+      input.txt-inp, textarea{
+        font-size: 18px;
+        color: $w;
+        background: none;
+        border-radius: 2px;
+        border: 1px solid $bdr-inp;
+        width: 100%;
+        height: 55px;
+        padding-left: 10px;
+        &:focus{
+          box-shadow: 0 0 6px 0 rgba($inp-bx-sh, .7);
+          border: 1px solid $team-bx-sh;
+        }
+        &:focus + label.plh, &:not(:placeholder-shown) + label.plh{
+          transform: scale(.9) translateY(-50px) translateX(-10px);
+        }
+      }
+      textarea{
+        resize: none;            
+        height: 150px;
+      }
+      label.plh, input.txt-inp, textarea{
+        font-family: $ml;            
+        transition: all .2s;
+        transition-timing-function: ease;
+        transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+      }
+    }        
+    button{
+      @include hw(55, 150);
+      font-family: $msb;
+      letter-spacing: 2px;
+    }
+  }
+
+  .footer{
+  	@extend %j-s-b;
+  	@extend %fw;
+    border-top: 1px solid rgba($footer-bdr, .25);
+    padding: 20px;
+    .title{
+      font-family: $mb;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .links{
+      font-family: $mr;
+      a{
+        text-decoration: none;
+        color: $w;
+        line-height: 1.7;
+        &:hover{
+          opacity: .7;
+        }
+      }   
+    }
+    .res{
+      font-family: $nl;
+      font-size: 16px;
+      opacity: .8;
+      margin-bottom: 10px;
+    }
+    .social{
+      font-family: $mr;
+      font-size: 16px;
+      .icons{
+        margin-top: 10px;
+        a{
+          margin-right: 25px;
         }
       }
     }
   }
-  .footer{
-  	@extend %j-s-b;
-  	@extend %fw;
+  .copyright{
+    padding: 20px;
+    font-family: $rbr;
+  }
+
+  .modal#sub-modal{
+    .modal-dialog{
+      width: 660px;
+      max-width: unset;
+    }
+    .modal-content{
+      height: auto;
+      padding: 40px;
+      border: none;
+      border-radius: 2px;
+      box-shadow: 0 0 12px 0 rgba(115, 166, 200, 0.3);
+      background-image: linear-gradient(to bottom, #161c26, #0b0e12);
+      background-color: transparent;
+      .sub-title{
+        text-align: center;
+        opacity: .75;
+        font-family: $ml;
+        font-size: 20px;
+        font-weight: 300;
+        margin-bottom: 20px;
+      }
+      .custom-checkbox{
+        @include prefixed(user-select, none);
+        font-family: $ml;
+        font-size: 20px;
+        font-weight: 300;
+        .custom-control-input:checked~.custom-control-label::before{
+          // background-color: #2ac4e9;
+          background-image: linear-gradient(66deg, #2ac4e9, #36d5fa);
+        }
+        .custom-control-label{
+          margin-left: 1rem;
+          &::before, &::after{
+            width: 1.25rem;
+            height: 1.25rem;
+          }
+        }
+      }
+      button{
+        @include hw(55, 250);
+        font-family: $msb;
+        letter-spacing: 2px;
+      }
+    }
   }
 }
