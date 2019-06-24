@@ -30,11 +30,11 @@
   font-family: "roboto-r";
   src: url(../fonts/roboto/Roboto-Regular.ttf) format("truetype");
 }
-body .footer, body .header {
+body .footer, body section#section4 img.net, body section#section4 .divide, body .header {
   width: 100%;
 }
 
-body section#section3, body section#section0, html, body {
+body section#section0, html, body {
   height: 100%;
   width: 100%;
 }
@@ -101,6 +101,11 @@ body .header nav {
   position: relative;
   left: 2vw;
 }
+@media (max-width: 1280px) {
+  body .header nav {
+    left: 3vw;
+  }
+}
 body .header nav a {
   color: #fff;
   font-size: 20px;
@@ -109,12 +114,25 @@ body .header nav a {
   margin: 0 32px;
   transition: all 0.2s;
 }
+@media (max-width: 1280px) {
+  body .header nav a {
+    margin: 0 10px;
+  }
+}
 body .header nav a:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 body .header button {
   height: 50px;
   width: 130px;
+}
+@media (max-width: 1280px) {
+  body .header button {
+    margin-right: 5px;
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+  }
 }
 body .header button:nth-of-type(1) {
   margin-right: 20px;
@@ -140,6 +158,11 @@ body section#section0 .inner .title {
   font-size: 55px;
   font-weight: 300;
   margin-bottom: 50px;
+}
+@media (max-width: 1280px) {
+  body section#section0 .inner .title {
+    font-size: 45px;
+  }
 }
 body section#section0 .inner .sub-title {
   font-family: "muli-l";
@@ -211,21 +234,29 @@ body section#section2 .ctn-team .ctn-team-item .ctn-desc .sub-title {
   opacity: 0.4;
 }
 body section#section3 {
-  height: 120%;
   padding: 22px;
   font-family: "muli-l";
   font-size: 24px;
   font-weight: 300;
-  background: url(../img/bg-bottom.png) no-repeat center;
-  background-size: cover;
-  background-position: 0% 100%;
 }
 body section#section3 p {
   margin-bottom: 35px;
 }
 body section#section4 {
-  margin-top: -250px;
-  padding-bottom: 150px;
+  position: relative;
+}
+body section#section4 .ctn-contact {
+  margin-bottom: 150px;
+}
+body section#section4 .divide {
+  border-top: 1px solid rgba(19, 164, 199, 0.25);
+}
+body section#section4 img.net {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: -1;
+  opacity: 0.5;
 }
 body .ctn-contact {
   width: 660px;
@@ -255,6 +286,7 @@ body .ctn-contact .form-field label.plh {
   position: absolute;
   padding-left: 20px;
   top: 32px;
+  left: 15px;
 }
 body .ctn-contact .form-field input.txt-inp, body .ctn-contact .form-field textarea {
   font-size: 18px;
@@ -290,7 +322,7 @@ body .ctn-contact button {
   letter-spacing: 2px;
 }
 body .footer {
-  border-top: 1px solid rgba(19, 164, 199, 0.25);
+  align-items: flex-start;
   padding: 20px;
 }
 body .footer .title {
@@ -324,6 +356,11 @@ body .footer .social .icons {
 }
 body .footer .social .icons a {
   margin-right: 25px;
+}
+@media (max-width: 1280px) {
+  body .footer .social .icons a {
+    margin-right: 10px;
+  }
 }
 body .copyright {
   padding: 20px;

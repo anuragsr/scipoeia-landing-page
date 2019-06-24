@@ -18,6 +18,14 @@ $inp-bx-sh: #1cacd0;
 $footer-bdr: #13a4c7;
 $copy-cl: #0c0f15;
 
+$breakpoints: (
+  'sd': 1024px,
+  'md': 1280px,
+  'lp': 1366px,
+  'sld': 1400px,  
+  'ld': 1600px
+) !default;
+
 // Full height
 %fh{  
   height: 100%;

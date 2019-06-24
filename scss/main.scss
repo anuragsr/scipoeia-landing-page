@@ -46,10 +46,16 @@ body {
   	@include pa(0, 0);
     z-index: 1;
   	padding: 35px 70px;
-    nav {
+    nav {      
+      @include media("<=md") {
+        left: 3vw;
+      }
       position: relative;
       left: 2vw;
       a {
+        @include media("<=md") {
+          margin: 0 10px;
+        }
         color: $w;
         font-size: 20px;
         font-family: $lg;
@@ -62,6 +68,11 @@ body {
       }
     }
     button{
+      @include media("<=md") {
+        margin-right: 5px;
+        @include hw(40, 100);
+        font-size: 16px;
+      }
       @include hw(50, 130);
       &:nth-of-type(1){
         margin-right: 20px;
@@ -82,8 +93,11 @@ body {
       background: url(../img/bg-main.svg) no-repeat center;
       background-size: contain;
       .inner{
-        width: 50vw;          
+        width: 50vw;
         .title{
+          @include media("<=md") {
+            font-size: 45px;
+          }
           font-family: $nl;
           font-size: 55px;
           font-weight: 300;
@@ -164,22 +178,29 @@ body {
       } 
     }
     &#section3{
-      @extend %fhw;
-      height: 120%;
       padding: 22px;
       font-family: $ml;
       font-size: 24px;
       font-weight: 300;
-      background: url(../img/bg-bottom.png) no-repeat center;
-      background-size: cover;
-      background-position: 0% 100%;
       p{
         margin-bottom: 35px;
       }
     }
     &#section4{
-      margin-top: -250px;
-      padding-bottom: 150px;      
+      position: relative;
+      .ctn-contact{
+        margin-bottom: 150px;
+      }
+      .divide{
+        @extend %fw;
+        border-top: 1px solid rgba($footer-bdr, .25);
+      }
+      img.net{
+        @extend %fw;
+        @include pa("", 0, 0, "");
+        z-index: -1;
+        opacity: .5;
+      }
     }
   }
 
@@ -209,6 +230,7 @@ body {
         position: absolute;
         padding-left: 20px;
         top: 32px;
+        left: 15px;
       }
       input.txt-inp, textarea{
         font-size: 18px;
@@ -247,8 +269,8 @@ body {
 
   .footer{
   	@extend %j-s-b;
-  	@extend %fw;
-    border-top: 1px solid rgba($footer-bdr, .25);
+  	@extend %fw;    
+    align-items: flex-start;
     padding: 20px;
     .title{
       font-family: $mb;
@@ -279,6 +301,9 @@ body {
         margin-top: 10px;
         a{
           margin-right: 25px;
+          @include media("<=md") {            
+            margin-right: 10px;
+          }
         }
       }
     }
