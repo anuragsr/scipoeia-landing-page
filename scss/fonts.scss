@@ -22,8 +22,26 @@ $ml: 'muli-l';
   src: url(../fonts/muli/Muli-Light.ttf) format('truetype');
 }
 
+$mr: 'muli-r';
+@font-face {
+  font-family: $mr;
+  src: url(../fonts/muli/Muli-Regular.ttf) format('truetype');
+}
+
 $msb: 'muli-sb';
 @font-face {
   font-family: $msb;
   src: url(../fonts/muli/Muli-SemiBold.ttf) format('truetype');
+}
+
+$mb: 'muli-b';
+@font-face {
+  font-family: $mb;
+  src: url(../fonts/muli/Muli-Bold.ttf) format('truetype');
+}
+
+$rbr: 'roboto-r';
+@font-face {
+  font-family: $rbr;
+  src: url(../fonts/roboto/Roboto-Regular.ttf) format('truetype');
 }

@@ -2,6 +2,29 @@ $w: #fff;
 $b: #000;
 
 $bg-main: #0e131b;
+$btn-cl: #6dd5ed;
+$btn-bx-sh: #88e8ff;
+$btn-gr-start: #0691b4;
+$btn-gr-end: #36d5fa;
+
+$team-bx-sh: #0691b4;
+$team-gr-start: #0e131b;
+$team-gr-end: #0b0f16;
+
+$cnt-gr-end:  #0b0e12;
+$bdr-inp: #455a64; 
+$inp-bx-sh: #1cacd0;
+
+$footer-bdr: #13a4c7;
+$copy-cl: #0c0f15;
+
+$breakpoints: (
+  'sd': 1024px,
+  'md': 1280px,
+  'lp': 1366px,
+  'sld': 1400px,  
+  'ld': 1600px
+) !default;
 
 // Full height
 %fh{  
@@ -48,4 +71,24 @@ $bg-main: #0e131b;
   @if $right != ""{
     right: #{$right}#{$unit};
   }
+}
+
+// Mixin for height-width
+@mixin hw($h:"", $w:"", $unit: "px") {  
+  @if $h != ""{
+    height: #{$h}#{$unit};
+  }
+  @if $w != ""{
+    width: #{$w}#{$unit};
+  }
+}
+
+// Prefix & Keyframes mixins
+@mixin prefixed($property, $value) {
+  -webkit-#{$property}: #{$value}; /* Safari */
+  -khtml-#{$property}: #{$value}; /* Konqueror HTML */  
+  -moz-#{$property}: #{$value}; /* Firefox */
+  -ms-#{$property}: #{$value}; /* Internet Explorer/Edge */
+  -o-#{$property}: #{$value}; /* Opera */
+  #{$property}: #{$value}; /* Non-prefixed version */
 }
